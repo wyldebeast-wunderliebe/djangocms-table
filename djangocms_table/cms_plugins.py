@@ -17,7 +17,7 @@ class TablePlugin(CMSPluginBase):
 
     fieldsets = (
         (None, {
-            'fields': ('name',)
+            'fields': ('name', 'cssclass')
         }),
         (_('Headers'), {
 
@@ -35,6 +35,7 @@ class TablePlugin(CMSPluginBase):
             data = "error"
         context.update({
             'name': instance.name,
+            'cssclass': instance.cssclass,
             'data': data,
             'instance':instance,
         })

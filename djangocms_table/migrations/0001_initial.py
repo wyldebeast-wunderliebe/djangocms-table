@@ -15,6 +15,7 @@ class Migration(SchemaMigration):
             ('headers_top', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=1)),
             ('headers_left', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=0)),
             ('headers_bottom', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=0)),
+            ('cssclass', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('table_data', self.gf('django.db.models.fields.TextField')()),
         ))
         db.send_create_signal('djangocms_table', ['Table'])
@@ -54,6 +55,7 @@ class Migration(SchemaMigration):
             'headers_left': ('django.db.models.fields.PositiveSmallIntegerField', [], {'default': '0'}),
             'headers_top': ('django.db.models.fields.PositiveSmallIntegerField', [], {'default': '1'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '256'}),
+            'cssclass': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'table_data': ('django.db.models.fields.TextField', [], {})
         }
     }
